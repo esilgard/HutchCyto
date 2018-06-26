@@ -1,7 +1,7 @@
 *__HutchCyto__*
 ==============================================================================
 
-Primary directory for the Fred Hutch standard cytogenetics processing pipeline
+Primary directory for Fred Hutch standard cytogenetics parsing scripts
 ------------------------------------------------------------------------------
 
 Can be run from the command line eg:
