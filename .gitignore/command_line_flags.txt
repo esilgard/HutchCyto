@@ -1,0 +1,3 @@
+-f	required	input_file	a fully qualified path/name for the input file
+-o	required	output_file	a fully qualified path/name for the output file
+-cl	not_required	clonality_flag	clonality flag check - y or n (default is yes)
