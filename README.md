@@ -4,7 +4,7 @@
 Primary directory for Fred Hutch standard cytogenetics parsing scripts
 ------------------------------------------------------------------------------
 
-Can be run from the command line eg:
+(Python 3.6.5) Can be run from the command line eg:
 
 $ python cyto_engine.py -f sample_io_files/sample_karyotype_data.tsv -o sample_io_files/sample_out.json -cl n
 
@@ -14,7 +14,7 @@ $ python cyto_engine.py -f sample_io_files/sample_karyotype_data.tsv -o sample_i
 * command_line_flags.txt - keep track of required and optional command line arguments
 	* -f: input file path
 	* -o: output file path
-	* -cl: clonality flag (t or f)
+	* -cl: clonality flag (y or n) the default value is 'y' (will check minumum cell requirements for clonality)
 * global_strings.py: a set of string variables used in various scripts in this directory
 * iscn_parser.py: a program to parse the cleaned karyotype string into a queryable data structure [ISCN formatting guidelines](http://www.cydas.org/Docs/ISCNAnalyser/Analysis.html)
 * iscn_string_cleaner.py: a simple script to clean up the ISCN string by stripping off trailing or leading free text, accounting for common and unambiguous formatting irregularities
