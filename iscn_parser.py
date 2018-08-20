@@ -9,6 +9,7 @@ import global_strings as gb
 __version__ = 'iscn_parser1.0'
 
 def get(karyotype_string):
+    #print (karyotype_string)
     '''
     parse ISCN cytogenetic information from a short string of text containing
     information about the genetic variation/karyotype in the ISCN format
@@ -18,8 +19,8 @@ def get(karyotype_string):
     return_list = []
     seperate_cell_types = re.split('[/]+',karyotype_string)
     cell_type_order = 0
-
-    for each_cell_type in seperate_cell_types:    
+    #print (str(len(seperate_cell_types)) + '   ' + str(seperate_cell_types))
+    for each_cell_type in seperate_cell_types:
         d = {}
         d[gb.OFFSET] = karyotype_string.find(each_cell_type) + cell_type_order
         d[gb.ABNORMALITIES] = []
@@ -32,16 +33,16 @@ def get(karyotype_string):
                 d[gb.CELL_COUNT] = int(cell_count.group(2).strip('cp').strip())
                 each_cell_type = each_cell_type[:each_cell_type.find(cell_count.group(1))]
             ## catches error when there is no cell count
-            except ValueError:
-                d[gb.WARNING] = True                
+            except:
+                d[gb.WARNING] = 'Error parsing number of cells'                
             # cell descr list - order is important to refer back to previous cell lines
             cell_description = each_cell_type.split(',')
-            try:
+            try:                
                 d[gb.CHROM_NUM] = cell_description[0].strip()
                 d[gb.CHROM] = cell_description[1].strip()
-            except ValueError:
+            except: 
                 ## catches error when there is no chromosome type number and type
-                d[gb.WARNING] = True
+                d[gb.WARNING] = 'Error parsing sex chromosmes and/or number of chromosomes'
             ## if the length of the cell_description is greater than 2, there are abnormalities
             if len(cell_description) > 2:
                 d[gb.ABNORMALITIES] = cell_description[2:]
@@ -49,8 +50,8 @@ def get(karyotype_string):
                 and len(seperate_cell_types) > 1:
                     try:
                         d[gb.CHROM] = return_list[0][gb.CHROM]
-                    except ValueError:
-                        d[gb.WARNING] = True
+                    except:
+                        d[gb.WARNING] = 'Error parsing cell line reference to sex chromosomes'
                         d[gb.CHROM] = 'UNK'
                     d[gb.ABNORMALITIES] += return_list[0][gb.ABNORMALITIES]
 
@@ -69,8 +70,8 @@ def get(karyotype_string):
                         d[gb.CHROM] = return_list[cell_type_order-1][gb.CHROM]
                         d[gb.ABNORMALITIES] = return_list[cell_type_order-1][gb.ABNORMALITIES]\
                         + d[gb.ABNORMALITIES]
-                    except ValueError:                        
-                        d[gb.WARNING] = True
+                    except:      
+                        d[gb.WARNING] = 'Error parsing cell line reference (e.g. sdl2)'
 
             ## parse abnormalities into dictionaries of type of abnormality: (num/further abn type, arm loc)
             for i in range(len(d[gb.ABNORMALITIES])):                
@@ -99,15 +100,15 @@ def get(karyotype_string):
                         if abnormal_chromosome:
                             d[gb.ABNORMALITIES][i] = {'other aberration': \
                             (abnormal_chromosome.group(1), abnormal_chromosome.group(2))}
-                        else:                            
-                            d[gb.WARNING] = True
+                        else:   
+                            d[gb.WARNING] = 'Error finding type of abnormality'
         
         ## warning flag for error finding cell count
         else:
-            d[gb.WARNING] = True
+            d[gb.WARNING] = "Error parsing cell count"
         return_list.append(d)
         cell_type_order += 1
-    return return_list    
+    return return_list
 
 if __name__ == '__main__':
-    print (get('46,XX,?der(5)t(5;9)(p13;q34)t(6;9)(p22;q34),?der(6)t(6;9)(p22;q34),?der(9)t(6;9)(p22;q34)(5;9)(p13;q34)[cP5]//46,XY,add(1)(q11)[5]/46,XX,add(5)(q11.2)[15]'))
+    print (get('46,XX,inv(16)(p13.1q22)[13]/47,idem,+21[1]/48,idem,+8,+21[4]/46,XX[2]'))

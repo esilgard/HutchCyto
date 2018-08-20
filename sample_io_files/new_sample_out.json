@@ -1,0 +1,828 @@
+{
+    "ControlInfo": {
+        "ClonalityFlag": false,
+        "InputFile": "sample_io_files/sample_karyotype_data.tsv",
+        "ProcessDate": "2018-06-26T13:22:47.601108"
+    },
+    "Errors": [],
+    "Reports": [
+        {
+            "1158": [
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "KaryotypeString",
+                    "value": "45,X[12]/46,XX[38]"
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "Warning",
+                    "value": false
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "MonosomalKaryotype",
+                    "value": false
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "ComplexKaryotype",
+                    "value": false
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "SexChromosomeAbnormality",
+                    "value": 12
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "Normal",
+                    "value": 38
+                },
+                {
+                    "Rationale": [
+                        "Normal Karyotype"
+                    ],
+                    "algorithmVersion": "eln_classification1.0",
+                    "name": "ELN_RiskCategory",
+                    "value": "Intermediate"
+                }
+            ]
+        },
+        {
+            "1151": [
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "KaryotypeString",
+                    "value": "46,XY[20]"
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "Warning",
+                    "value": false
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "MonosomalKaryotype",
+                    "value": false
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "ComplexKaryotype",
+                    "value": false
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "Normal",
+                    "value": 20
+                },
+                {
+                    "Rationale": [
+                        "Normal Karyotype"
+                    ],
+                    "algorithmVersion": "eln_classification1.0",
+                    "name": "ELN_RiskCategory",
+                    "value": "Intermediate"
+                }
+            ]
+        },
+        {
+            "1068": [
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "KaryotypeString",
+                    "value": "50,XY,+Y,+6,+6,+13[16]/50,idem,t(6;12)(p23;q13)[4]"
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "Warning",
+                    "value": false
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "MonosomalKaryotype",
+                    "value": false
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "ComplexKaryotype",
+                    "value": true
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "DistinctAbnormalities",
+                    "value": 9
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "+Y",
+                    "value": 20
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "DistinctTrisomies",
+                    "value": 6
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "+6",
+                    "value": 40
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "+13",
+                    "value": 20
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(6p)",
+                    "value": 4
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(12q)",
+                    "value": 4
+                },
+                {
+                    "Rationale": [
+                        "Complex Or Monosomal Karyotype"
+                    ],
+                    "algorithmVersion": "eln_classification1.0",
+                    "name": "ELN_RiskCategory",
+                    "value": "Unfavorable"
+                }
+            ]
+        },
+        {
+            "1101": [
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "KaryotypeString",
+                    "value": "46,XY,del(8)(q22q24.1),t(11;19)(q23;p13.1)[10]/46,XY,der(8)del(8)t(8;13)(p21;q12),t(11;19)[6]/46,XY,t(4;10)(p16;p11.2),t(11;19),del(20)(q11.2)[3]/47,XY,t(11;19),+i(13)(q10)[1]"
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "Warning",
+                    "value": true
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "MonosomalKaryotype",
+                    "value": false
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "ComplexKaryotype",
+                    "value": true
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "DistinctAbnormalities",
+                    "value": 9
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "del(8q)",
+                    "value": 10
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(19p)",
+                    "value": 10
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(11q)",
+                    "value": 10
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(8p)",
+                    "value": 6
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(1q)",
+                    "value": 6
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(3q)",
+                    "value": 6
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(13q)",
+                    "value": 6
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(4p)",
+                    "value": 3
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(10p)",
+                    "value": 3
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "del(20q)",
+                    "value": 3
+                },
+                {
+                    "Rationale": [
+                        "Complex Or Monosomal Karyotype",
+                        "t(11;19)(q23;p13.1)"
+                    ],
+                    "algorithmVersion": "eln_classification1.0",
+                    "name": "ELN_RiskCategory",
+                    "value": "Unfavorable"
+                }
+            ]
+        },
+        {
+            "1216": [
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "KaryotypeString",
+                    "value": "46,XX,t(13;16)(q14;p13.3)[2]/46,XX,t(1;12)(p34.1;p13),t(1;11)(q32;q25),t(6;20)(p21.1;q13.3)[2]/46,XX[16]"
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "Warning",
+                    "value": false
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "MonosomalKaryotype",
+                    "value": false
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "ComplexKaryotype",
+                    "value": true
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "DistinctAbnormalities",
+                    "value": 4
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(16p)",
+                    "value": 2
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(13q)",
+                    "value": 2
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(1p)",
+                    "value": 2
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(12p)",
+                    "value": 2
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(1q)",
+                    "value": 2
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(11q)",
+                    "value": 2
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(6p)",
+                    "value": 2
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(20q)",
+                    "value": 2
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "Normal",
+                    "value": 16
+                },
+                {
+                    "Rationale": [
+                        "Complex Or Monosomal Karyotype"
+                    ],
+                    "algorithmVersion": "eln_classification1.0",
+                    "name": "ELN_RiskCategory",
+                    "value": "Unfavorable"
+                }
+            ]
+        },
+        {
+            "1285": [
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "KaryotypeString",
+                    "value": "46,XX,inv(12)(p12q15)[4]/46,XX[16]"
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "Warning",
+                    "value": false
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "MonosomalKaryotype",
+                    "value": false
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "ComplexKaryotype",
+                    "value": false
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "DistinctAbnormalities",
+                    "value": 1
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "inv(12p)",
+                    "value": 4
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "inv(12q)",
+                    "value": 4
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "Normal",
+                    "value": 16
+                },
+                {
+                    "Rationale": [
+                        "Other Abnormalities"
+                    ],
+                    "algorithmVersion": "eln_classification1.0",
+                    "name": "ELN_RiskCategory",
+                    "value": "Intermediate"
+                }
+            ]
+        },
+        {
+            "1388": [
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "KaryotypeString",
+                    "value": "40~43,XX,-X,add(1)(q11),der(3)del(3)(p21)t(1;3)(q21;q29),del(4)(q21),add(5)(q11.2),-6,der(9)t(6;9)(p21.1;p22),der(14;15)(q10;q10),add(15)(p11.1),-16,-17,-18,r(19)(p13q13.4),-20,add(21)(q21),i(21)(q10),+1~3mar[cp4]/46,XX[16]"
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "Warning",
+                    "value": false
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "MonosomalKaryotype",
+                    "value": true
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "ComplexKaryotype",
+                    "value": true
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "DistinctAbnormalities",
+                    "value": 17
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "-X",
+                    "value": 4
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "add(1q)",
+                    "value": 4
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(1q)",
+                    "value": 4
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(2q)",
+                    "value": 4
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(3q)",
+                    "value": 8
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(21q)",
+                    "value": 4
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "del(4q)",
+                    "value": 4
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "add(5q)",
+                    "value": 4
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "DistinctMonosomies",
+                    "value": 5
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "-6",
+                    "value": 4
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(6p)",
+                    "value": 4
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(9p)",
+                    "value": 8
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "del(1p)",
+                    "value": 8
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "del(4p)",
+                    "value": 4
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "del(5p)",
+                    "value": 4
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "del(14p)",
+                    "value": 4
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "del(15p)",
+                    "value": 4
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "-16",
+                    "value": 4
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "-17",
+                    "value": 4
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "-18",
+                    "value": 4
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "-20",
+                    "value": 4
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "add(21q)",
+                    "value": 4
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "del(21p)",
+                    "value": 4
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "Normal",
+                    "value": 16
+                },
+                {
+                    "Rationale": [
+                        "Complex Or Monosomal Karyotype",
+                        "-17",
+                        "add(5)(q11.2)"
+                    ],
+                    "algorithmVersion": "eln_classification1.0",
+                    "name": "ELN_RiskCategory",
+                    "value": "Unfavorable"
+                }
+            ]
+        },
+        {
+            "1255": [
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "KaryotypeString",
+                    "value": "46,XX,t(3;9)(p25;q22),t(4;11)(q21;q23),t(4;14)(q21;q11.2)[2]/46,idem,i(7)(q10)[1]/46,idem,del(16)(q12.1q24),add(22)(q13)[2]/51-53,idem,+X,+1,+6,+15,+20,+21,+mar[cp6]/46,XX[4]"
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "Warning",
+                    "value": false
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "MonosomalKaryotype",
+                    "value": false
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "ComplexKaryotype",
+                    "value": true
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "DistinctAbnormalities",
+                    "value": 22
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(3p)",
+                    "value": 11
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(9q)",
+                    "value": 11
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(4q)",
+                    "value": 22
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(11q)",
+                    "value": 11
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "t(4;14)",
+                    "value": 11
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(14q)",
+                    "value": 11
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "del(7p)",
+                    "value": 1
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "del(16q)",
+                    "value": 2
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "+X",
+                    "value": 6
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "DistinctTrisomies",
+                    "value": 5
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "+1",
+                    "value": 6
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "+6",
+                    "value": 6
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "+15",
+                    "value": 6
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "+20",
+                    "value": 6
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "+21",
+                    "value": 6
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "Normal",
+                    "value": 4
+                },
+                {
+                    "Rationale": [
+                        "t(4;11)(q21;q23)",
+                        "Complex Or Monosomal Karyotype"
+                    ],
+                    "algorithmVersion": "eln_classification1.0",
+                    "name": "ELN_RiskCategory",
+                    "value": "Unfavorable"
+                }
+            ]
+        },
+        {
+            "1452": [
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "KaryotypeString",
+                    "value": "46,XX,-7,+r[12]/47,XX,+8[4]/47,XX,-7,+8,+r[2]/46,XX,add(6)(p25),-7,+r[2]/46,XX[1]"
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "Warning",
+                    "value": false
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "MonosomalKaryotype",
+                    "value": false
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "ComplexKaryotype",
+                    "value": true
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "DistinctAbnormalities",
+                    "value": 9
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "DistinctMonosomies",
+                    "value": 3
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "-7",
+                    "value": 16
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "DistinctTrisomies",
+                    "value": 2
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "+8",
+                    "value": 6
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "add(6p)",
+                    "value": 2
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "Normal",
+                    "value": 1
+                },
+                {
+                    "Rationale": [
+                        "-7",
+                        "Complex Or Monosomal Karyotype"
+                    ],
+                    "algorithmVersion": "eln_classification1.0",
+                    "name": "ELN_RiskCategory",
+                    "value": "Unfavorable"
+                }
+            ]
+        },
+        {
+            "1133": [
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "KaryotypeString",
+                    "value": "46,XY,+Y,del(4)(q21q27),-5,-7,+13,add(13)(p11.2),add(13)(p11.2),der(17)t(5;17)(p12;p11.2)[3]/92<4N>,idemx2[1]/46,XY[16]"
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "Warning",
+                    "value": false
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "MonosomalKaryotype",
+                    "value": true
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "ComplexKaryotype",
+                    "value": true
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "DistinctAbnormalities",
+                    "value": 8
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "+Y",
+                    "value": 3
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "del(4q)",
+                    "value": 3
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "DistinctMonosomies",
+                    "value": 2
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "-5",
+                    "value": 3
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "-7",
+                    "value": 3
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "DistinctTrisomies",
+                    "value": 1
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "+13",
+                    "value": 3
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(1p)",
+                    "value": 6
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(5p)",
+                    "value": 3
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(7p)",
+                    "value": 6
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "translocation(17p)",
+                    "value": 6
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "SexChromosomeAbnormality",
+                    "value": 1
+                },
+                {
+                    "algorithmVersion": "cytogenetics_abnormality_parser1.0",
+                    "name": "Normal",
+                    "value": 16
+                },
+                {
+                    "Rationale": [
+                        "-7",
+                        "Complex Or Monosomal Karyotype",
+                        "-5",
+                        "der(17)t(5;17)(p12;p11.2)"
+                    ],
+                    "algorithmVersion": "eln_classification1.0",
+                    "name": "ELN_RiskCategory",
+                    "value": "Unfavorable"
+                }
+            ]
+        }
+    ]
+}

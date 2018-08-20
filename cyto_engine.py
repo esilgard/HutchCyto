@@ -91,6 +91,7 @@ else:
     for k_id,k_str in raw_cyto_d.items():
         clean_str = iscn_string_cleaner.get(k_str)
         cell_list = iscn_parser.get(clean_str)
+
         OUTPUT_DICTIONARY[gb.REPORTS].append({k_id:parse_abnormalities.get(cell_list, clean_str, OUTPUT_DICTIONARY[gb.CNTL][gb.CLONE_FLG])})
     ## output results to file ##
     OUTPUT_RETURN = output_results.main(ARGUMENTS.get('-o'), OUTPUT_DICTIONARY)

@@ -11,10 +11,6 @@ import re
 
 __version__='cytogenetics_abnormality_parser1.0'
 
-# default minimums for clonality check - 3 for monosomies, 2 for all others
-min_abn = 2
-min_mono = 3
-
 def get(cell_list, karyotype_string, clonality_flag):
     '''
         take a parsed list of cells, where each element within the cell group 
@@ -23,6 +19,8 @@ def get(cell_list, karyotype_string, clonality_flag):
     '''
     if not clonality_flag :
         min_abn = 0; min_mono = 0
+    else:
+        min_abn = 2; min_mono = 3
     return_dictionary_list = [{gb.NAME:gb.KARYO_STR, gb.VALUE:karyotype_string, 
         gb.VERSION:__version__}]
    
@@ -63,7 +61,7 @@ def get(cell_list, karyotype_string, clonality_flag):
     ## start by counting cells with each type of pertinent aberration      
     for x in cell_list:    
         if x.get(gb.WARNING, False):
-            abnormalities[gb.WARNING] = True            
+            abnormalities[gb.WARNING] = 'Error carried over from iscn_parser'            
         try:
             # used to track unique abnormalities
             abnormality_set = set([])
@@ -102,7 +100,6 @@ def get(cell_list, karyotype_string, clonality_flag):
                                             add_to_d('+' + stripped_chr, cell_count, variation_start, variation_end)
                                     ## all monosomies                            
                                     elif z == '-' and cell_count >= min_mono: 
-
                                         # track only autosomal monosomies for 
                                         # monosomal karyotype classification
                                         if stripped_chr not in ['X','Y']:
@@ -114,7 +111,6 @@ def get(cell_list, karyotype_string, clonality_flag):
                                     # track other structural abnormalities for 
                                     # monosomal karyotype classificaiton
                                 else:
-
                                     if z not in ['r','mar','+ma','+mar','add']:
                                         other_structural_abnormalities_set.add(variation_string) 
                                     all_abnormality_set.add(variation_string) 
@@ -181,7 +177,7 @@ def get(cell_list, karyotype_string, clonality_flag):
                                     
                     ## catch any other formatting abnormalities/parsing errors
                     except:
-                        abnormalities[gb.WARNING] = True; x[gb.WARNING] = True
+                        abnormalities[gb.WARNING] = 'parsing err'; x[gb.WARNING] = 'parsing err'
                                                 
             ## there are no abnormalities - add up the "normal" cells
             elif x[gb.CHROM] in ['XX','XY']:
@@ -197,7 +193,7 @@ def get(cell_list, karyotype_string, clonality_flag):
                 abnormalities[gb.MONO_TYPE] = True            
         ## catch trouble with cell counts etc       
         except:
-            abnormalities[gb.WARNING] = True; x[gb.WARNING] = True   
+            abnormalities[gb.WARNING] = 'err w/ cell counts'; x[gb.WARNING] = 'err w/ cell counts'   
                       
     #append all abnormality info to return_list
     for each_variation in abnormalities:

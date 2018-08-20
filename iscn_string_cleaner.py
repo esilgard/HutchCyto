@@ -10,6 +10,7 @@ import global_strings as gb
 __version__ = 'iscn_string_cleaner1.0'
 
 def get(karyo_string):
+    orig = karyo_string
     '''
     clean up the ISCN string that contains the ISCN karyotype info
     look for common formatting inconsistenies or typos in the karyotype
@@ -32,16 +33,18 @@ def get(karyo_string):
     karyo_string = karyo_string[:karyo_string.rfind(']') + 1]
     ## start the karyostring with the pattern of <chromosome number><,>
     ## as in ....46,XX...
-    m = re.match('.*?([\d]{2,3}(~[\d]{2,3})?),.*', karyo_string)
-    if m:      
+    m = re.match('.*?([\d]{2,3}(~[\d]{2,3})?)(<[\d][nN]>)?,.*', karyo_string)
+    if m:
         karyo_string = karyo_string[m.start(1):]
     else:
         pass
         # choice here for error handling or abort for non parsable strings early on
 
     karyo_string = karyo_string.strip()
+    #if not karyo_string:
+    #    print ('CLEANING DEL ' + orig)
     return karyo_string
 
 if __name__ == '__main__':
-    print (get ('ISCN:  46,XY[20]'))
+    print (get ('90<4n>,XXYY,psu dic(6;9)(q27;p21)x2,del(9)(p21)x2[4]/91,idem,+22[4]/46,XY[7]'))
     print (get ('some 23451q23 ., example karyotype 40~43,XX,-X,add(1)(q11),der(3)del(3)(p21)t(1;3)(q21;q29),del(4)(q21),add(5)(q11.2),add(21)(q21),i(21)(q10),+1~3mar[cp4]/46,XX[16]'))
