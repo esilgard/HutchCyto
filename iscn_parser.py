@@ -19,7 +19,7 @@ def get(karyotype_string):
     return_list = []
     seperate_cell_types = re.split('[/]+',karyotype_string)
     cell_type_order = 0
-    #print (str(len(seperate_cell_types)) + '   ' + str(seperate_cell_types))
+
     for each_cell_type in seperate_cell_types:
         d = {}
         d[gb.OFFSET] = karyotype_string.find(each_cell_type) + cell_type_order
@@ -65,7 +65,7 @@ def get(karyotype_string):
                     d[gb.CHROM] = return_list[1][gb.CHROM]
                     d[gb.ABNORMALITIES] += return_list[1][gb.ABNORMALITIES]
                 ## catch the specific cell line references like sdl1 or sdl2 ##
-                elif 'sdl' in d[gb.CHROM]:
+                elif 'sdl' in d[gb.CHROM] or 'sl' in d[gb.CHROM]:
                     try:
                         d[gb.CHROM] = return_list[cell_type_order-1][gb.CHROM]
                         d[gb.ABNORMALITIES] = return_list[cell_type_order-1][gb.ABNORMALITIES]\
@@ -111,4 +111,5 @@ def get(karyotype_string):
     return return_list
 
 if __name__ == '__main__':
-    print (get('46,XX,inv(16)(p13.1q22)[13]/47,idem,+21[1]/48,idem,+8,+21[4]/46,XX[2]'))
+    for r in get('45,XY,-7[2]/44,idem,add(2)(q11/2),der(12)t(2;12)(q11.2;p12),-18[19]'):
+        print (r)

@@ -41,8 +41,10 @@ def get(karyo_string):
         # choice here for error handling or abort for non parsable strings early on
 
     karyo_string = karyo_string.strip()
-    #if not karyo_string:
-    #    print ('CLEANING DEL ' + orig)
+
+    # return the original, uncleaned string if it was unparsable for some reason
+    if not karyo_string:
+        return orig
     return karyo_string
 
 if __name__ == '__main__':

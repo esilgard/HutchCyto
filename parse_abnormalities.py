@@ -46,6 +46,8 @@ def get(cell_list, karyotype_string, clonality_flag):
         if cell_count:
             # None cell_counts are binary values; only integers get added
             abnormalities[abnormality] = abnormalities.get(abnormality, 0) + cell_count
+        elif abnormality == gb.ABNS:
+            abnormalities[abnormality] = 0
         else:
             abnormalities[abnormality] = True
         offsets[abnormality] = offsets.get(abnormality, [])
@@ -82,8 +84,9 @@ def get(cell_list, karyotype_string, clonality_flag):
                                 (karyotype_string[cell_offset:].find(variation_string))
                                 # note - this does NOT capture character offsets correctly
                                 # for 'idem', 'sl'  references
-                                variation_end = variation_start + len(variation_string)  
-                                add_to_d(gb.ABNS, 1, variation_start, variation_end)
+                                variation_end = variation_start + len(variation_string)
+                                #....should this just be the all_abnormality set?
+                                #add_to_d(gb.ABNS, 1, variation_start, variation_end)
                                 ## all trisomies
                                 if z in ['+','-']:
                                     all_abnormality_set.add(variation_string) 
@@ -177,7 +180,7 @@ def get(cell_list, karyotype_string, clonality_flag):
                                     
                     ## catch any other formatting abnormalities/parsing errors
                     except:
-                        abnormalities[gb.WARNING] = 'parsing err'; x[gb.WARNING] = 'parsing err'
+                        abnormalities[gb.WARNING] = True; x[gb.WARNING] = 'unknown parsing err'
                                                 
             ## there are no abnormalities - add up the "normal" cells
             elif x[gb.CHROM] in ['XX','XY']:
@@ -185,7 +188,7 @@ def get(cell_list, karyotype_string, clonality_flag):
             else:
                 ## other sec chromosome abnormalities
                 add_to_d(gb.SEX_CHRM_ABN, cell_count, cell_offset, cell_offset + len(x[gb.CHROM]))
-            ## complex and monosomal karyotype classifications (no char offsets currently)
+            ## complex and monosomal karyotype classifications (no char offsets currently)            
             if len(abnormality_set) > 2:
                 abnormalities[gb.CMPX_TYPE] = True
             if len(monosomy_set) > 1 or (len(monosomy_set) == 1 and \
@@ -193,14 +196,14 @@ def get(cell_list, karyotype_string, clonality_flag):
                 abnormalities[gb.MONO_TYPE] = True            
         ## catch trouble with cell counts etc       
         except:
-            abnormalities[gb.WARNING] = 'err w/ cell counts'; x[gb.WARNING] = 'err w/ cell counts'   
-                      
+            abnormalities[gb.WARNING] = True; x[gb.WARNING] = 'err w/ cell counts'   
+    add_to_d(gb.ABNS, len(all_abnormality_set), 0, len(karyotype_string))                  
     #append all abnormality info to return_list
     for each_variation in abnormalities:
         offsets[each_variation] = offsets.get(each_variation, [])
         return_dictionary_list.append({gb.NAME:each_variation, \
             gb.VALUE:abnormalities[each_variation],gb.VERSION:__version__})
-    
+   
     return_dictionary_list.append(eln_classification.get(abnormalities, abnormality_set, offsets, karyotype_string, 0))
 
     return return_dictionary_list

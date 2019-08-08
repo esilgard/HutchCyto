@@ -86,7 +86,7 @@ if len(MISSING_FLAGS) > 0:
     sys.exit(1)
 else:
     with open(ARGUMENTS.get('-f'), mode='r') as infile:
-        reader = csv.DictReader(infile, delimiter='\t')
+        reader = csv.DictReader(infile) #, delimiter='\t')
         raw_cyto_d = dict((rows[gb.KARYO_ID],rows[gb.KARYO_STR]) for rows in reader)
     for k_id,k_str in raw_cyto_d.items():
         clean_str = iscn_string_cleaner.get(k_str)
